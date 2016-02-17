@@ -1,0 +1,424 @@
+html {
+	font-size: 18px;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+header {
+	position: relative;
+	height: 160px;
+}
+
+header::after {
+  content: "";
+  background: url("../images/wood.jpg");
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.logo {
+	position: absolute;
+	top: 20px;
+	/*height: 80px;
+	width: 150px;*/
+	margin-left: 20px;
+	/*background-color: #000000;*/
+}
+
+.content {
+	position: relative;
+	padding: 20px;
+}
+
+/*** TOP NAV ****************************/
+.topNav {
+	position: absolute;
+	right: 20px;
+	color: white;
+	min-width: 150px;
+	background-color: rgba(20, 20, 20, 0.8);
+	padding: 10px 25px 0 25px;
+	border-radius: 0 0 5px 5px;
+	text-align: right;
+}
+
+.fa-user {
+	font-size: 30px;
+}
+
+.menuHov {
+	position: relative;
+	display: inline-block;
+	padding-bottom: 15px;
+	padding-left: 5px;
+}
+
+.userMenu {
+	position: absolute;
+	visibility: hidden;
+	top: 47px;
+	right: 25px;
+	width: 150px;
+	height: auto;
+	background-color: #DDDBD8;
+	z-index: 10;
+	text-align: center;
+}
+
+.userMenu ul {  }
+
+.userMenu li {
+	display: inline-block;
+	list-style: none;
+}
+.userMenu li a {
+	width: 150px;
+	line-height: 40px;
+	color: #333;
+	display: inline-block;
+	text-decoration: none;
+}
+.userMenu li a:hover {
+	color: #000;
+	background-color: #EEE;
+}
+
+.menuHov:hover + .userMenu,
+.userMenu:hover {
+	visibility: visible;
+}
+
+/*** NAVIGATION ****************************/
+nav {
+	position: absolute;
+	bottom: 0;
+	background-color: #337ab7;
+	height: 50px;
+	line-height: 50px;
+	width: 100%;
+}
+nav ul {
+	padding-left: 20px;
+}
+
+nav li {
+	display: inline-block;
+	list-style: none;
+}
+nav li a {
+	height: 52px;
+	color: #FFF;
+	display: inline-block;
+	padding: 0 15px 0 15px;
+	text-decoration: none;
+}
+nav li a:hover {
+	border-bottom: 3px solid #337ab7;
+	color: #FFF;
+}
+
+/*** HOME *********************************/
+.centerDiv {
+	width: 700px;
+	margin: 0 auto;
+	text-align: center;
+}
+.centerDiv img {
+	box-shadow: 0 0 40px #575149;
+}
+.centerDiv h3 {
+	color: #575149;
+	margin-bottom: 30px;
+}
+
+/*** LOGIN, SIGNUP, PROFILE ****************/
+.midBox {
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.userInfo {
+	width: 400px;
+	text-align: left;
+}
+
+.userInfo .row:nth-child(even) {background-color: #FFF;}
+.userInfo .row:nth-child(odd) {background-color: #FFF;}
+
+
+/*** Equipment ****************************/
+.searchEquip {
+  position: relative;
+}
+.searchEquip input {
+	text-indent: 32px;
+	margin-bottom: 15px;
+	width: 400px;
+}
+.searchEquip .fa-filter {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+	color: #999999;
+}
+.searchEquip .fa-times-circle {
+  position: absolute;
+  top: 13px;
+  left: 380px;
+	font-size: 20px;
+	color: #999999;
+}
+.searchEquip .fa-times-circle:hover {
+	color: #555555;
+}
+
+
+.table {
+	display: table;
+	width: 100%;
+}
+.table .equipResults {
+	font-size: 16px;
+}
+
+.row {
+	display: table-row;
+	width: 100%;
+}
+
+.row:nth-child(even) {background-color: rgba(87, 75, 62, 0.2);}
+.row:nth-child(odd) {background-color: #FFF;}
+
+.cell {
+	display: table-cell;
+	padding: 10px;
+}
+
+.fa-info-circle {
+	color: #555555;
+	font-size: 22px;
+}
+.fa-info-circle:hover {
+	color: #337ab7;
+}
+
+.direction:after {
+	font-family: FontAwesome;
+	content: "\f077";
+	color: rgba(87, 75, 62, 0.9);
+	font-size: 16px;
+}
+.direction.reverse:after {
+	font-family: FontAwesome;
+	content: "\f078";
+	color: rgba(87, 75, 62, 0.9);
+	font-size: 16px;
+}
+
+.equipHeaders > div {
+	cursor: pointer;
+}
+
+
+/*** REPAIRS ****************************/
+.repairs textarea {
+	width: 100%;
+	font-size: 16px;
+	padding-left: 9px;
+	margin-bottom: 10px;
+	border-radius: 3px;
+	border: 1px solid rgba(0, 12, 119, 0.3);
+}
+
+.repairList {
+	width: 102%;
+	border-color: #DDDDDD;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+.repairHeading {
+height: 20px;	background-color: rgba(87, 75, 62, 0.2);
+	padding: 5px;
+}
+.repairType {
+	float: left;
+}
+.repairDate {
+	float: right;
+}
+.repairNotes {
+	clear: both;
+	padding: 5px;
+	font-size: 14px;
+	line-height: 16px;
+}
+.repairNotes span {
+	color: #999999;
+}
+
+/*** RENTALS ****************************/
+.topRight {
+	position: absolute;
+	right: 45px;
+	top: 3px;
+}
+
+.fa-check-circle-o.large, .fa-times-circle-o.large {
+	font-size: 120px;
+	float: right;
+	padding-right: 20px;
+}
+
+.fa-check, .fa-times {
+	font-size: 22px;
+}
+
+
+.fa-check-circle-o {
+	color: #23a151;
+}
+.fa-times-circle-o {
+	color: #b55a5a;
+}
+
+.fa-check {
+	color: #23a151;
+}
+.fa-times {
+	color: #b55a5a;
+}
+
+
+
+/*** MISC ****************************/
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 5px;
+	display: inline-block;
+}
+
+h2 {
+	color: #337ab7;
+	font-size: 24px;
+	margin-bottom: 25px;
+}
+h3 {
+	color: #337ab7;
+}
+
+.left {
+	position: relative;
+	width: 40%;
+	float: left;
+}
+.right {
+	position: relative;
+	width: 40%;
+	float: right;
+}
+.center {
+	text-align: center;
+}
+.padLeft {
+	padding-left: 5%;
+}
+.padRight {
+	padding-right: 5%;
+}
+.padLeftRight {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+
+button {
+	height: 40px;
+	border: 1px solid #428bca;
+	border-radius: 5px;
+	background-color: #428bca;
+	color: #FFFFFF;
+	padding: 0px 15px;
+	margin: 5px 0px;
+	font-size: 18px;
+}
+
+input {
+	line-height: 40px;
+	width: 100%;
+	min-width: 200px;
+	font-size: 16px;
+	padding-left: 9px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border: 1px solid rgba(0, 12, 119, 0.3);
+}
+
+button:hover {
+	background-color: #337ab7;
+	cursor: pointer;
+}
+
+
+.select-style {
+	position: relative;
+    padding: 0;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    width: 102.2%;
+		line-height: 40px;
+		border: 1px solid rgba(0, 12, 119, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+		background-color: rgba(255, 255, 255, 0);
+    /*background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 90% 50%;*/
+}
+
+.select-style:before {
+    content: "\f107";
+    font-family: FontAwesome;
+    color: #AAA;
+    font-size: 25px;
+    position: absolute;
+    right: 20px;
+		z-index: -1;
+}
+
+.select-style select {
+		font-size: 16px;
+		color: #AAAAAA;
+    padding: 5px 8px;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+.midBox div.select-style {
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.fillData {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	color: #F9F9F9;
+}

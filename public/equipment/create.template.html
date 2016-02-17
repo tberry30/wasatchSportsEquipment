@@ -1,0 +1,32 @@
+<div class="midBox">
+  <input ng-model="equipToCreate.ws_id" placeholder="ID"><br>
+
+  <div class="select-style">
+    <select ng-model="equipToCreate.type">
+      <option value="" disabled>Choose a rental type</option>
+      <option value="Ski">Ski</option>
+      <option value="Snowboard">Snowboard</option>
+      <option value="Cross-Country">Cross-Country</option>
+      <option value="Snowshoe">Snowshoe</option>
+      <option value="Mountain Bike">Mountain Bike</option>
+      <option value="Road Bike">Road Bike</option>
+    </select><br>
+  </div>
+
+  <div class="select-style">
+    <select ng-model="equipToCreate.package">
+      <option value="" disabled>Choose a package</option>
+      <option value="Sport">Sport</option>
+      <option value="Performance">Performance</option>
+      <option value="Demo">Demo</option>
+    </select><br>
+  </div>
+
+  <input ng-model="equipToCreate.season" placeholder="Season"><br>
+  <input ng-model="equipToCreate.brand" placeholder="Brand"><br>
+  <input ng-model="equipToCreate.model" placeholder="Model"><br>
+  <input ng-model="equipToCreate.size" placeholder="Size"><br>
+
+  <button ng-click="create(equipToCreate)">Create</button>
+
+</div>

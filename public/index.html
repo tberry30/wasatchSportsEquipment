@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="wasatchSports">
+<head>
+	<meta charset="UTF-8">
+	<title>Wasatch Sports | Outdoor equipment rentals across the Wasatch Front!</title>
+	<link rel="stylesheet" href="./assets/styles/reset.css">
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<!-- Latest compiled and minified CSS -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="assets/fonts/font-awesome-4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./assets/styles/main.css">
+</head>
+<body>
+
+	<header>
+		<div class="logo">
+			<a href="/"><img src="/assets/images/WS Logo4.png" alt=""></a>
+		</div>
+
+		<div class="topNav">
+			<user-menu></user-menu>
+			<!-- Welcome, Tim. <i class="fa fa-user"></i> -->
+		</div>
+
+
+		<nav>
+			<!-- <a ui-sref="signup" style="padding-left: 20px;">Sign Up</a>
+			<a ui-sref="login">Login</a>
+			<a ui-sref="profile">View Profile</a> -->
+			<ul>
+				<li><a ui-sref="equipment" style="padding-left: 20px;">View Equipment</a></li>
+				<li><a ui-sref="create">Create Equipment</a></li>
+			</ul>
+		</nav>
+
+	</header>
+	<div class="content">
+
+		<ui-view></ui-view>
+
+	</div> <!-- content -->
+
+
+	<!-- SCRIPTS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+	<script src="./app.module.js"></script>
+	<script src="./app.routes.js"></script>
+
+	<script src="./home/home.controller.js"></script>
+	<script src="./home/signup.controller.js"></script>
+	<script src="./home/login.controller.js"></script>
+	<script src="./home/profile.controller.js"></script>
+
+	<script src="./equipment/equipment.controller.js"></script>
+	<script src="./equipment/edit.controller.js"></script>
+	<script src="./equipment/create.controller.js"></script>
+
+	<script src="./services/equipment.service.js"></script>
+	<script src="./services/user.service.js"></script>
+
+	<script src="./directives/userMenu.directive.js"></script>
+</body>
+</html>

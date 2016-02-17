@@ -1,0 +1,43 @@
+<div class="midBox">
+
+	<h2>{{profileMessage}}</h2>
+
+	<div class="table userInfo">
+	    <div class="row">
+	        <div class="cell"><h3>First Name:</h3></div>
+					<div class="cell">{{ user.firstName }}</div>
+			</div>
+			<div class="row">
+	        <div class="cell"><h3>Last Name:</h3></div>
+					<div class="cell">{{ user.lastName }}</div>
+			</div>
+			<div class="row">
+	        <div class="cell"><h3>Username:</h3></div>
+					<div class="cell">{{ user.username }}</div>
+			</div>
+			<div class="row">
+	        <div class="cell"><h3>email:</h3></div>
+					<div class="cell">{{ user.email }}</div>
+			</div>
+	</div>
+
+
+<!--
+	<div class="userInfo">
+		<h3>First Name:</h3> {{ user.firstName }}<br>
+		<h3>Last Name:</h3> {{ user.lastName }}<br>
+		<h3>Username:</h3> {{ user.username }}<br>
+		<h3>email:</h3> {{ user.email }}<br><br>
+	</div><br> -->
+	<br><br>
+
+
+	Reset Password:<br><br>
+	<input type="password" ng-model="user.newPassword" placeholder="New Password">
+	<button ng-click="updatePassword(user.id)">Update</button><br><br><br>
+
+
+	<!-- <a href="/logout">Logout</a> -->
+	<button ng-click="logout()">Logout</button>
+	<button ng-click="deleteUser(user.id)">Delete Account</button>
+</div>

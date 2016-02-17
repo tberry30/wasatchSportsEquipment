@@ -1,0 +1,23 @@
+<div class="midBox">
+	<h2>{{signupMessage}}</h2>
+
+	<!-- Create User -->
+	<form action="/signup" method="post">
+		<input ng-model="boxOne" type="text" placeholder="First Name" name="firstName" autofocus="true"><br>
+		<input ng-model="boxTwo" type="text" placeholder="Last Name" name="lastName"><br>
+    <input ng-model="boxThree" type="text" placeholder="Username" name="username"><br>
+    <input ng-model="boxFour" type="password" placeholder="Password" name="password"><br>
+    <input ng-model="boxFive" type="text" placeholder="Email" name="email"><br>
+
+		<div class="select-style">
+	    <select ng-model="boxSix" name="isAdmin">
+	    	<option value="">Admin? yes/no</option>
+			  <option value=true>yes</option>
+			  <option value=false>no</option>
+			</select><br>
+		</div>
+
+    <button type="submit">Add User</button>
+	</form>
+
+</div>

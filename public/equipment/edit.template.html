@@ -1,0 +1,84 @@
+<div>
+  <div class="left padLeftRight">
+    <input ng-model="equipToEdit.ws_id" placeholder="ID">
+
+    <div class="select-style">
+      <select ng-model="equipToEdit.type">
+        <option value="" disabled>Choose a rental type</option>
+        <option value="Ski">Ski</option>
+        <option value="Snowboard">Snowboard</option>
+        <option value="Cross-Country">Cross-Country</option>
+        <option value="Snowshoe">Snowshoe</option>
+        <option value="Mountain Bike">Mountain Bike</option>
+        <option value="Road Bike">Road Bike</option>
+      </select>
+    </div>
+
+    <div class="select-style">
+      <select ng-model="equipToEdit.package">
+        <option value="" disabled>Choose a package</option>
+        <option value="Sport">Sport</option>
+        <option value="Performance">Performance</option>
+        <option value="Demo">Demo</option>
+      </select>
+    </div>
+
+    <input ng-model="equipToEdit.season" placeholder="Season">
+    <input ng-model="equipToEdit.brand" placeholder="Brand">
+    <input ng-model="equipToEdit.model" placeholder="Model">
+    <input ng-model="equipToEdit.size" placeholder="Size">
+    <input ng-model="equipToEdit.attributes" placeholder="Attributes">
+
+    <button ng-click="update(equipToEdit)">Save</button>
+    <button ng-click="delete(equipToEdit._id)">Delete</button>
+
+  </div>
+  <div class="right padLeftRight">
+    <div class="rentals">
+      <h3>Total Rentals:</h3> {{ equipToEdit.timesRented }}
+
+      <div class="topRight">
+        Available to Rent:<br>
+        <i ng-show="!equipToEdit.checkedOut" class="fa fa-check-circle-o large"></i>
+        <i ng-show="equipToEdit.checkedOut" class="fa fa-times-circle-o large"></i>
+      </div>
+
+      <br>
+      <button class="btn btn-default" ng-show="!equipToEdit.checkedOut" ng-click="checkOut(equipToEdit._id)">Check Out</button>
+      <button class="btn btn-default" ng-show="equipToEdit.checkedOut" ng-click="checkIn(equipToEdit._id)">Check In</button>
+
+    </div><br><br>
+
+    <div class="repairs">
+
+
+      <h3>Total Repairs:</h3> {{ equipToEdit.timesRepaired }} <br><br>
+
+      <h3>Add Repair</h3>
+      <div class="select-style">
+        <select ng-model="equipRepair.type">
+          <option value="" disabled>Choose a repair type</option>
+          <option value="Repair">Repair</option>
+          <option value="Tune">Tune</option>
+          <option value="Test">Test</option>
+        </select>
+      </div>
+
+      <textarea ng-model="equipRepair.notes" rows="3" cols="60"></textarea><br>
+
+      <button ng-click="addRepair(equipToEdit._id, equipRepair)">Add Repair</button>
+
+      <br><br>
+      <h3>Repair History</h3>
+      <div class="repairList" ng-repeat="repair in equipToEdit.repairs">
+        <div class="repairHeading">
+          <div class="repairType">{{ repair.type }}</div>
+          <div class="repairDate">{{ repair.createdDate | date : 'short' }}</div>
+        </div>
+        <div class="repairNotes">
+          <span>{{ repair.createdBy.username }}:</span> {{ repair.notes }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
